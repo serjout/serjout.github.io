@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Expert</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: #fff;
+            font-family: "Roboto", Arial, Helvetica, sans-serif;
+            font-weight: 300;
+        }
+
+        .logo {
+            z-index: 2;
+            width: 140px;
+            height: 65px;
+        }
+
+        .root {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+        }
+
+        .left {
+            z-index: 1;
+            background-color: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            pointer-events: none;
+        }
+
+        .bottom {
+            z-index: 2;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bottom-header {
+            margin: 0;
+            font-size: inherit;
+            font-weight: 300;
+        }
+
+        .bottom-list {
+            padding: 0 0 0 20px;
+            list-style: disc;
+        }
+
+        .contacts {
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contacts-header {
+            margin: 0;
+            font-weight: 400;
+            font-size: 35px
+        }
+
+        .contacts-address {
+            font-size: 18px
+        }
+
+        .contacts-map {
+            color: #76A7F1;
+            font-weight: 400;
+        }
+
+        .contacts-tel,
+        .contacts-tel:hover,
+        .contacts-tel:visited,
+        .contacts-tel:active {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .contacts-mail,
+        .contacts-mail:hover,
+        .contacts-mail:visited,
+        .contacts-mail:active {
+            color: #fff;
+        }
+
+        @media
+        only screen and (max-width: 768px) {
+            .root {
+                background-image: url('mobile.jpg');
+                background-position: center;
+                background-size: cover;
+                width: 100vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .logo {
+                margin: 55px auto 0;
+            }
+
+            .contacts {
+                text-align: right;
+                padding: 0 40px;
+            }
+
+            .contacts-header {
+                font-size: 25px;
+                margin: 0 0 20px 0;
+            }
+
+            .contacts-address {
+                font-size: 13px;
+                margin: 0 0 10px 0;
+            }
+
+            .contacts-map {
+                font-size: 13px;
+                margin: 0 0 30px 0;
+            }
+
+            .contacts-tel {
+                font-size: 20px;
+                margin: 0 0 10px 0;
+            }
+
+            .contacts-mail {
+                font-size: 13px;
+            }
+
+            .bottom {
+                font-size: 12px;
+                padding: 0 40px 55px 40px;
+            }
+
+            .left {
+                display: none;
+            }
+        }
+
+        @media
+        only screen and (min-width: 430px) and (max-width: 768px) {
+            .bottom-header {
+                font-size: 14px
+            }
+
+            .bottom {
+                font-size: 14px
+            }
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1430px) {
+            .root {
+                background-image: url('mobile.jpg');
+                background-position: center;
+                background-size: cover;
+                width: 100vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .logo {
+                margin: 55px 0 0 80px;
+            }
+
+            .contacts {
+                text-align: right;
+                padding: 0 80px 0 37vw;
+            }
+
+            .contacts-header {
+                font-size: 35px;
+                margin: 0 0 20px 0;
+            }
+
+            .contacts-address {
+                font-size: 18px;
+                margin: 0 0 10px 0;
+            }
+
+            .contacts-map {
+                font-size: 18px;
+                margin: 0 0 30px 0;
+            }
+
+            .contacts-tel {
+                font-size: 26px;
+                margin: 0 0 10px 0;
+            }
+
+            .contacts-mail {
+                font-size: 18px;
+            }
+
+            .bottom {
+                font-size: 18px;
+                padding: 0 80px 80px 80px;
+            }
+
+            .bottom-header {
+                font-size: 18px;
+                font-weight: 300;
+            }
+
+            .left {
+                background: rgba(0, 0, 0, 0.5) none;
+                width: 35vw;
+                display: block;
+            }
+        }
+
+        @media only screen and (min-width: 1430px) and (orientation: landscape) {
+            .root {
+                background-image: url('bg.jpg');
+                background-position: left -300px top -60px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .logo {
+                margin: 55px 0 0 80px;
+            }
+
+            .contacts {
+                text-align: right;
+                padding: 0 15vw 0 50vw;
+            }
+
+            .contacts-header {
+                font-size: 45px;
+                margin: 0 0 20px 0;
+            }
+
+            .contacts-address {
+                font-size: 24px;
+                margin: 0 0 10px 0;
+            }
+
+            .contacts-map {
+                font-size: 24px;
+                margin: 0 0 30px 0;
+            }
+
+            .contacts-tel {
+                font-size: 24px;
+                margin: 0 0 10px 0;
+            }
+
+            .contacts-mail {
+                font-size: 18px;
+            }
+
+            .bottom {
+                font-size: 18px;
+                padding: 0 0 100px 0;
+                position: relative;
+                left: 45vw;
+                width: 50vw;
+            }
+
+            .bottom-header {
+                font-size: 18px;
+                font-weight: 300;
+            }
+
+            .left {
+                width: 100vw;
+                height: 100vh;
+                background-size: cover;
+                background-image: url('left.svg');
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="root">
+        <div class="left"></div>
+        <img class="logo" src="./logo.svg" />
+        <section class="contacts">
+            <h1 class="contacts-header">Koнтакты</h1>
+            <span class="contacts-address">г.&nbspМосква,&nbspПресненская&nbspнабережная,&nbspд.12 «Башня&nbspФедерация.&nbspВосток», 57&nbspэтаж,&nbsp4&nbspофис</span>
+            <a class="contacts-map" href="https://www.google.com/maps/place/%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F+%D0%92%D0%BE%D1%81%D1%82%D0%BE%D0%BA/@55.7498476,37.5355651,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54bdcbbad4623:0x6e48900fe77c2d9f!8m2!3d55.7498514!4d37.5377453">
+                Посмотреть на карте
+            </a>
+            <a class="contacts-tel" href="tel:+7 900 267 4434">+7 900 267 4434</a>
+            <a class="contacts-mail" href="mailto:info@expert.org.ru">info@expert.org.ru</a>
+        </section>
+        <section class="bottom">
+            <h2 class="bottom-header">Expert – инвестиционная компания, финансирующая процедуры:</h2>
+            <ul class="bottom-list">
+                <li class="bottom-list-item">трансграничного взыскания задолженности</li>
+                <li class="bottom-list-item">установления активов в РФ и заграницей</li>
+                <li class="bottom-list-item">представительства в корпоративных конфликтах</li>
+                <li class="bottom-list-item">судебных процессов, в т.ч. обращения взыскания на активы</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
