@@ -27,6 +27,8 @@
             width: 100vw;
             height: 100vh;
             position: absolute;
+            background-position: top left;
+            background-size: cover;
         }
 
         .left {
@@ -50,11 +52,17 @@
             margin: 0;
             font-size: inherit;
             font-weight: 300;
+            padding: 0;
         }
 
         .bottom-list {
-            padding: 0 0 0 20px;
-            list-style: disc;
+            padding: 0;
+            list-style: none;
+        }
+
+        .bottom-list-item:before {
+            content: "·   ";
+            white-space: pre;
         }
 
         .contacts {
@@ -97,9 +105,6 @@
         only screen and (max-width: 768px) {
             .root {
                 background-image: url('mobile.jpg');
-                background-position: center;
-                background-size: cover;
-                width: 100vw;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -111,7 +116,7 @@
 
             .contacts {
                 text-align: right;
-                padding: 0 40px;
+                padding: 20px 40px;
             }
 
             .contacts-header {
@@ -140,7 +145,7 @@
 
             .bottom {
                 font-size: 12px;
-                padding: 0 40px 55px 40px;
+                padding: 20px 40px 55px 40px;
             }
 
             .left {
@@ -161,10 +166,6 @@
 
         @media only screen and (min-width: 768px) and (max-width: 1430px) {
             .root {
-                background-image: url('mobile.jpg');
-                background-position: center;
-                background-size: cover;
-                width: 100vw;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -196,7 +197,7 @@
 
             .contacts-tel {
                 font-size: 26px;
-                margin: 0 0 10px 0;
+                margin: 20px 0 10px 0;
             }
 
             .contacts-mail {
@@ -205,7 +206,7 @@
 
             .bottom {
                 font-size: 18px;
-                padding: 0 80px 80px 80px;
+                padding: 0 80px 120px 80px;
             }
 
             .bottom-header {
@@ -222,10 +223,6 @@
 
         @media only screen and (min-width: 1430px) and (orientation: landscape) {
             .root {
-                background-image: url('bg.jpg');
-                background-position: left -300px top -60px;
-                background-size: cover;
-                background-repeat: no-repeat;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -256,8 +253,8 @@
             }
 
             .contacts-tel {
-                font-size: 24px;
-                margin: 0 0 10px 0;
+                font-size: 32px;
+                margin: 20px 0 10px 0;
             }
 
             .contacts-mail {
@@ -266,7 +263,7 @@
 
             .bottom {
                 font-size: 18px;
-                padding: 0 0 100px 0;
+                padding: 0 0 140px 0;
                 position: relative;
                 left: 45vw;
                 width: 50vw;
@@ -282,6 +279,22 @@
                 height: 100vh;
                 background-size: cover;
                 background-image: url('left.svg');
+            }
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1080px) {
+            .root {
+                background-image: url('2160_1620_Background_horizontal_tablet_opt.jpg');
+            }
+        }
+        @media only screen and (min-width: 1080px) {
+            .root {
+                background-image: url('3840_3840_Background_desktop_opt.jpg');
+            }
+        }
+        @media only screen and (min-width: 1080px) and (max-width: 2500px) and (device-pixel-ratio: 1) {
+            .root {
+                background-image: url('2160_1620_Background_horizontal_tablet_opt.jpg');
             }
         }
     </style>
